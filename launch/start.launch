@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+<arg name="world_name" default="/home/aman/hector_quad/catkin_ws/src/trial/worlds/lmap.world" />
+<include file="/home/aman/hector_quad/catkin_ws/src/trial/launch/world.launch">
+  <arg name="world_name" default="$(arg world_name)"/>
+</include>
+
+<include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor_with_downward_cam.launch" />
+</launch>
